@@ -1,8 +1,10 @@
 # Дан список. Найдите сумму элементом с четными индексами
 
 
-def even_sum(lst):
-    # Здесь пишем код
+def even_sum():
+    # Здесь я добавила свой код
+    sum_list = sum(data[i][::2])
+    print(sum_list)
     return sum_list
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
@@ -21,6 +23,6 @@ test_data = [
 
 
 for i, d in enumerate(data):
-    assert even_sum(d) == test_data[i], f'С набором {d} есть ошибка, не проходит проверку'
+    assert even_sum() == test_data[i], f'С набором {d} есть ошибка, не проходит проверку'
     print(f'Тестовый набор {d} прошёл проверку')
 print('Всё ок')
