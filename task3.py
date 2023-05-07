@@ -2,7 +2,10 @@
 # В исходном списке минимум 2 элемента.
 
 def modification(lst):
-    # Здесь пишем код
+    # Решение задания
+    data[i].append(data[i][0])
+    data[i][0] = data[i][-2]
+    del data[i][-2]
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
