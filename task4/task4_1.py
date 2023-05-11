@@ -8,13 +8,10 @@ def which_triangle(a, b, c):
     # Здесь нужно написать код
     if a == b == c:
         type_triangle = 'Равносторонний'
-        print(type_triangle)
     elif a == b != c or a == c != b or b == c != a:
         type_triangle = 'Равнобедренный'
-        print(type_triangle)
     elif a + b <= c or a + c <= b or b + c <= a:
         type_triangle = "Не треугольник"
-        print(type_triangle)
     elif a != b != c:
         type_triangle = 'Обычный'
     return type_triangle
