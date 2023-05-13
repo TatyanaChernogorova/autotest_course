@@ -7,10 +7,10 @@ from statistics import mean
 
 def get_list_info(lst):
     # Здесь я добавила свой код
-    min_elem = min(data[i])
-    max_elem = max(data[i])
-    sum_list = sum(data[i])
-    average = round(mean(data[i]), 2)
+    min_elem = min(lst)
+    max_elem = max(lst)
+    sum_list = sum(lst)
+    average = round(sum_list/len(lst), 2)
     return min_elem, max_elem, sum_list, average
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

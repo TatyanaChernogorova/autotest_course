@@ -3,9 +3,9 @@
 
 def modification(lst):
     # Решение задания
-    data[i].append(data[i][0])
-    data[i][0] = data[i][-2]
-    del data[i][-2]
+    lst.append(lst[0])
+    lst[0] = lst[-2]
+    del lst[-2]
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
