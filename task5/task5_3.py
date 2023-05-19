@@ -21,14 +21,13 @@
 def everything_for_your_cat(cats_data):
     """Вывод всех животных для каждого владельца"""
     new_dict = dict()
-    for o in cats_data:
-        fio = o[-2] + " " + o[-1]  # Получение имени и фамилии владельца
-        cats = o[:2]  # Получение клички кота и возраста
+    for elem in cats_data:
+        fio = elem[-2] + " " + elem[-1]  # Получение имени и фамилии владельца
+        cats = elem[:2]  # Получение клички кота и возраста
         new_dict[fio] = new_dict.get(fio, []) + [cats]  # добавление в словарь кюча fio и его значений cats
     for key, value in new_dict.items():  # перебор словаря
         value = ";".join(map(str, value))
         line = f"{key}: {value}"
-        print(line)
     return new_dict
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
