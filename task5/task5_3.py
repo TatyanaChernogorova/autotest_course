@@ -24,10 +24,12 @@ def everything_for_your_cat(cats_data):
     for elem in cats_data:
         fio = elem[-2] + " " + elem[-1]  # Получение имени и фамилии владельца
         cats = elem[:2]  # Получение клички кота и возраста
-        new_dict[fio] = new_dict.get(fio, []) + [cats]  # добавление в словарь кюча fio и его значений cats
+        str_cats = ", ".join(map(str, cats))
+        new_dict[fio] = new_dict.get(fio, []) + [str_cats]
     for key, value in new_dict.items():  # перебор словаря
-        value = ";".join(map(str, value))
-        line = f"{key}: {value}"
+        value = "; ".join(map(str, value))
+        new_dict = f"{key}: {value}"
+        print(new_dict)
     return new_dict
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
